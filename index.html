@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng điều khiển Hội nhập | OnboardAI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="app-sidebar" id="app-sidebar"></aside>
+
+    <!-- Main Content Area -->
+    <div class="app-main">
+      <header class="app-topbar" id="app-topbar"></header>
+
+      <main class="page-content">
+        <!-- Banner chào mừng người dùng mới -->
+        <div class="card" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #4338ca 100%); color: white; margin-bottom: 2rem; border: none; position: relative; overflow: hidden;">
+          <div style="position: absolute; right: -20px; bottom: -30px; opacity: 0.15; pointer-events: none;">
+            <svg width="240" height="240" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; position: relative; z-index: 2;">
+            <div>
+              <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; margin-bottom: 0.75rem;">
+                <span>✨</span> Hành trình hội nhập 60 ngày thử việc
+              </div>
+              <h1 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;" id="welcome-title">Xin chào, Trần Minh Anh 👋</h1>
+              <p style="color: #cbd5e1; font-size: 0.95rem; max-width: 580px;">
+                Chúc mừng bạn đã gia nhập TechCorp! Đây là không gian cá nhân giúp bạn theo dõi lộ trình làm quen, hoàn thành nhiệm vụ và nhận trợ giúp từ AI bất cứ lúc nào.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="../pages/newhire-checklist.html" class="btn btn-primary" style="background: #ffffff; color: #4338ca;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                Xem Checklist hôm nay
+              </a>
+              <a href="../pages/newhire-ai-help.html" class="btn btn-ai">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"></path></svg>
+                Hỏi AI Chính sách
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thống kê tổng quan -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon-wrapper indigo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-days">19 / 60</div>
+              <div class="stat-label">Ngày thử việc đã qua</div>
+              <div class="stat-sub">Còn 41 ngày đến kỳ review chính thức</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrapper emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-progress">68%</div>
+              <div class="stat-label">Tiến độ Checklist</div>
+              <div class="stat-sub" id="stat-tasks-count">8/12 nhiệm vụ hoàn tất</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrapper cyan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-checkins">2</div>
+              <div class="stat-label">Buổi 1-on-1 đã thực hiện</div>
+              <div class="stat-sub">Đánh giá gần nhất: 5/5 ⭐</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrapper amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-value">4</div>
+              <div class="stat-label">Tài liệu đã tra cứu</div>
+              <div class="stat-sub">Sổ tay, Bảo mật, Git Flow</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bố cục 2 cột chính -->
+        <div class="dashboard-split">
+          
+          <!-- Cột trái: Nhiệm vụ cần làm & Trợ lý thông minh -->
+          <div>
+            <!-- Khối nhiệm vụ tiếp theo -->
+            <div class="card" style="margin-bottom: 1.5rem;">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    Nhiệm vụ tiếp theo của bạn
+                  </h2>
+                  <div class="card-subtitle">Hoàn thành các nhiệm vụ này để giữ đúng hạn lộ trình</div>
+                </div>
+                <a href="../pages/newhire-checklist.html" class="btn btn-outline btn-sm">Xem tất cả</a>
+              </div>
+
+              <!-- Thanh tiến độ tổng quát -->
+              <div style="margin-bottom: 1.25rem;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.4rem;">
+                  <span style="font-weight: 600;">Tiến độ hoàn thành giai đoạn</span>
+                  <span style="font-weight: 700; color: var(--primary);" id="bar-percent-label">68%</span>
+                </div>
+                <div class="progress-container" style="height: 12px;">
+                  <div class="progress-bar-fill" id="dashboard-progress-bar" style="width: 68%;"></div>
+                </div>
+              </div>
+
+              <!-- Danh sách nhiệm vụ pending -->
+              <div id="upcoming-tasks-list" class="task-list">
+                <!-- Sẽ được kết xuất bằng JavaScript -->
+              </div>
+            </div>
+
+            <!-- Khối mẹo AI hỗ trợ hàng ngày -->
+            <div class="ai-card">
+              <div class="ai-header-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"></path></svg>
+                AI Co-Pilot Gợi ý cho bạn
+              </div>
+              <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem;">Bạn sắp bước sang tuần đánh giá giữa kỳ (Mốc 30 ngày)</h3>
+              <p style="font-size: 0.875rem; color: #475569; line-height: 1.5; margin-bottom: 1rem;">
+                Theo phân tích dữ liệu, bạn đã hoàn tất 100% các yêu cầu về môi trường kỹ thuật và văn hóa. Để chuẩn bị tốt nhất cho buổi review với HR vào tuần tới, hãy hoàn thành nốt đầu việc <strong>"User Story #408"</strong> và chuẩn bị 2-3 câu hỏi cần Mentor hỗ trợ.
+              </p>
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="../pages/newhire-ai-help.html" class="btn btn-outline btn-sm" style="border-color: #c4b5fd; color: #6d28d9;">
+                  Hỏi AI mẹo phỏng vấn giữa kỳ
+                </a>
+                <button class="btn btn-outline btn-sm" onclick="UI.showToast('Ghi nhận', 'Đã lưu gợi ý vào danh sách ưu tiên cá nhân.', 'success')">
+                  Đã ghi nhớ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột phải: Thông tin Mentor, Liên hệ HR & Tài nguyên nhanh -->
+          <div>
+            <!-- Card Mentor trực tiếp -->
+            <div class="card" style="margin-bottom: 1.5rem;">
+              <div class="card-header">
+                <h2 class="card-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  Mentor / Người hướng dẫn
+                </h2>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="Mentor" style="width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 2px solid #4f46e5;" />
+                <div>
+                  <div style="font-weight: 700; font-size: 1rem;" id="mentor-name">Lê Hoàng Long</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Lead Software Architect</div>
+                  <div style="font-size: 0.75rem; color: var(--primary); font-weight: 600;">Phòng Công nghệ thông tin</div>
+                </div>
+              </div>
+              <p style="font-size: 0.85rem; color: #475569; margin-bottom: 1rem; background: #f8fafc; padding: 0.75rem; border-radius: var(--radius-md); border: 1px dashed var(--border-color);">
+                💬 <em>"Minh Anh chủ động hỏi bất cứ khi nào vướng mắc logic database nhé. Mình online Slack từ 9h - 18h hàng ngày."</em>
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <button class="btn btn-outline btn-sm" onclick="requestCheckinModal()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  Đăng ký lịch Check-in 1-on-1
+                </button>
+              </div>
+            </div>
+
+            <!-- Card Tài liệu quan trọng cần đọc -->
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                  Tài liệu đề xuất cho bạn
+                </h2>
+                <a href="#" class="btn btn-outline btn-sm">Xem kho</a>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;" id="quick-docs-list">
+                <!-- Sẽ kết xuất bằng JS -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal Đăng ký Check-in -->
+  <div class="modal-overlay" id="checkin-request-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Đăng ký lịch gặp 1-on-1 với Mentor</h3>
+        <button class="modal-close-btn" onclick="UI.closeModal('checkin-request-modal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="checkin-req-form">
+          <div class="form-group">
+            <label class="form-label">Chọn ngày đề xuất</label>
+            <input type="date" class="form-control" id="req-date" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nội dung bạn muốn trao đổi / tháo gỡ</label>
+            <textarea class="form-control" id="req-topic" rows="3" placeholder="Ví dụ: Rà soát lại thiết kế API module #408, xin ý kiến về phong cách review PR..." required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="UI.closeModal('checkin-request-modal')">Hủy</button>
+        <button class="btn btn-primary" onclick="submitCheckinRequest()">Gửi lời mời</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
